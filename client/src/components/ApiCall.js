@@ -26,6 +26,7 @@ const ApiCall = () => {
           setdata(res.data)
 
       })
+      .catch(err=>console.log(err))
 
   }
 
