@@ -20,7 +20,7 @@ const ApiCall = () => {
 
     function getInfo(){
 
-      axios.get('http://localhost:3001/user')
+      axios.get('/user')
       .then((res)=>{
           console.log(res.data)
           setdata(res.data)
@@ -32,7 +32,7 @@ const ApiCall = () => {
 
     const deleteItem=(id)=>{
       console.log(id)
-      axios.delete('http://localhost:3001/deleteList/'+id)
+      axios.delete('/deleteList/'+id)
       .then(res=>{
         console.log(res.data)
        getInfo()
@@ -51,7 +51,7 @@ const ApiCall = () => {
      // e.preventDefault()
       console.log(updateinput)
      
-      axios.put('http://localhost:3001/update/'+updateinput._id,updateinput)
+      axios.put('/update/'+updateinput._id,updateinput)
       .then(res=>console.log(res.data))
       .catch(err=>console.log(err))
       handleClose()

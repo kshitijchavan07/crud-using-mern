@@ -19,7 +19,7 @@ function AddUser() {
         console.log(input)
         
         setdata([{...input},data])
-        axios.post('http://localhost:3001/adddata',input)
+        axios.post('/adddata',input)
         navigate('/')
 
       
